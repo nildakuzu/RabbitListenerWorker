@@ -1,0 +1,2 @@
+Redis								-> http://localhost:8001
+RabbitMQ							-> http://localhost:15672/#/queues

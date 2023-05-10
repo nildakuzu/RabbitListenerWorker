@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  rabbitlistener:
+    image: ${DOCKER_REGISTRY-}rabbitlistener
+    build:
+      context: .
+      dockerfile: src/Presentation/Dockerfile
+
+  s_rabbitmq:
+    container_name: c_rabbitmq
+    image: rabbitmq:3-management
+
+  s_redis:
+    container_name: c_redis
+    image: redis
+
+  s_redisinsight:
+    image: redislabs/redisinsight:latest
+
+  s_postgresql:
+    container_name: c_postgres
+    image: postgres

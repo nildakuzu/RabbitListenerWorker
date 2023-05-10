@@ -1,0 +1,24 @@
+version: '3.4'
+services:
+  s_postgresql:
+    ports: 
+      - 5432:5432
+      - 6543:5432
+    environment:
+      POSTGRES_DB: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+      PGDATA: "/data/postgres"
+
+  s_redis:
+    ports:
+        - 6379:6379
+
+  s_redisinsight:
+    ports:
+      - '8001:8001'
+
+  s_rabbitmq:
+    ports:
+        - 5672:5672
+        - 15672:15672
